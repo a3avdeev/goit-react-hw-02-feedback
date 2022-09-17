@@ -1,5 +1,5 @@
 import React from "react";
-import FeedbackButtons from "components/FeedbackButtons/FeedbackButtons";
+
 
 export default function Statistics({good, neutral, bad, total, percent})  {
     return (

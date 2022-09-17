@@ -26,7 +26,7 @@ export default class FeedbackButtons extends Component {
     
 
     render() {
-        const { good, neutral, bad } = this.state;
+        // const { good, neutral, bad } = this.state;
         return (
             <div>
                 <h2>Please leave feedback</h2>
