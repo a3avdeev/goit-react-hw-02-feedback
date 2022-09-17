@@ -1,11 +1,9 @@
-import FeedbackButtons from './FeedbackButtons/FeedbackButtons'
-import Statistics from './Statistics/Statistics'
+import FeedbackForm from './FeedbackForm/FeedbackForm'
 
 export const App = () => {
   return (
     <>
-      <FeedbackButtons />
-      <Statistics />
+      <FeedbackForm />
     </>
   );
 };
