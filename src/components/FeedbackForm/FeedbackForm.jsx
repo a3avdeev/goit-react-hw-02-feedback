@@ -1,10 +1,10 @@
 import { Component } from "react";
-import PropTypes from "prop-types";
+import {FormWrapper} from "./FeedbackForm.Styled"
 
-import {FeedbackOptions} from '../FeedbackOptions/FeedbackOptions'
-import {Statistics} from '../Statistics/Statistics'
+import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions'
+import { Statistics } from '../Statistics/Statistics'
 import { Section } from '../Section/Section'
-import {Notification} from '../Notification/Notification'
+import { Notification } from '../Notification/Notification'
 
 export default class FeedbackForm extends Component {
     state = {
@@ -41,7 +41,7 @@ export default class FeedbackForm extends Component {
         const total = this.countTotal();
         const positivePercentage = this.countPercentage();
         return (
-            <div>
+            <FormWrapper>
                 <Section title="Please leave feedback">
                     <FeedbackOptions options={["good", "neutral", "bad"]} onLeaveFeedback={this.onLeaveFeedback} />
                 </Section>
@@ -55,20 +55,9 @@ export default class FeedbackForm extends Component {
                         positivePercentage={positivePercentage} />
                     }
                 </Section>
-            </div>
+            </FormWrapper>
             
         )
     }
 
-}
-
-
-FeedbackForm.propTypes = {
-    state: PropTypes.objectOf(PropTypes.shape({
-        good: PropTypes.number.isRequired,
-        neutral: PropTypes.number.isRequired,
-        bad: PropTypes.number.isRequired,
-    })),
-    total: PropTypes.number,
-    positivePercent: PropTypes.number,
 }
