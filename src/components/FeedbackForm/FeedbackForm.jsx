@@ -26,7 +26,7 @@ export default class FeedbackForm extends Component {
 
         const value = this.state.good;
         const result = (value / total) * 100;
-        return Number(result.toFixed(1));
+        return Number(result.toFixed(0));
     }
 
     onLeaveFeedback = (propertyName) => {
@@ -43,7 +43,7 @@ export default class FeedbackForm extends Component {
         return (
             <FormWrapper>
                 <Section title="Please leave feedback">
-                    <FeedbackOptions options={["good", "neutral", "bad"]} onLeaveFeedback={this.onLeaveFeedback} />
+                    <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.onLeaveFeedback} />
                 </Section>
                 
                 <Section title="Statistics">
